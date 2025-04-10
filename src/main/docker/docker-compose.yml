@@ -1,0 +1,35 @@
+version: "3.9"
+services:
+#  clean-architecture-poc:
+#    image: brunoeas1/clean-architecture-poc:0.0.1-SNAPSHOT.1
+#    container_name: clean-architecture-poc
+#    ports:
+#      - "8081:8080"
+#    environment:
+#      QUARKUS_PROFILE: "prod"
+#      QUARKUS_HTTP_CORS: "true"
+#      QUARKUS_HTTP_CORS_ORIGINS: "*"
+#      QUARKUS_HTTP_CORS_HEADERS: "*"
+#      QUARKUS_HTTP_CORS_ACCESS_CONTROL_MAX_AGE: "1800"
+#      QUARKUS_HTTP_CORS_ACCESS_CONTROL_ALLOW_CREDENTIALS: "true"
+#      QUARKUS_HTTP_CORS_METHODS: "GET,POST,PUT,DELETE"
+#    depends_on:
+#      - db
+#    restart: no
+
+  db:
+    image: postgres:latest
+    restart: always
+    ports:
+      - "5432:5432"
+    # set shared memory limit when using docker-compose
+    shm_size: 128mb
+    # or set shared memory limit when deploy via swarm stack
+    #volumes:
+    #  - type: tmpfs
+    #    target: /dev/shm
+    #    tmpfs:
+    #      size: 134217728 # 128*2^20 bytes = 128Mb
+    environment:
+      POSTGRES_PASSWORD: 123
+      POSTGRES_USER: principal
