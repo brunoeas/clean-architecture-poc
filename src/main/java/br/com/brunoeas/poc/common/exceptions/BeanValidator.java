@@ -1,4 +1,4 @@
-package br.com.brunoeas.poc.common.exception;
+package br.com.brunoeas.poc.common.exceptions;
 
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.Validation;
