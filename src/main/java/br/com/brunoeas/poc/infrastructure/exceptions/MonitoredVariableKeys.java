@@ -1,4 +1,4 @@
-package br.com.brunoeas.poc.common.exceptions;
+package br.com.brunoeas.poc.infrastructure.exceptions;
 
 public final class MonitoredVariableKeys {
 

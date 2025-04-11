@@ -1,7 +1,9 @@
-package br.com.brunoeas.poc.task;
+package br.com.brunoeas.poc.core.entities.task;
 
-import br.com.brunoeas.poc.common.enums.IndicatorYesNoEnum;
-import br.com.brunoeas.poc.common.enums.IndicatorYesNoEnumConverter;
+import br.com.brunoeas.poc.core.entities.common.enums.IndicatorYesNoEnum;
+import br.com.brunoeas.poc.core.entities.common.enums.IndicatorYesNoEnumConverter;
+import br.com.brunoeas.poc.core.entities.task.enums.TaskStatusEnum;
+import br.com.brunoeas.poc.core.entities.task.enums.TaskStatusEnumConverter;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -30,5 +32,8 @@ public class Task implements Serializable {
     @Convert(converter = IndicatorYesNoEnumConverter.class)
     @Column(name = "IN_PUBLIC_TASK", nullable = false)
     private IndicatorYesNoEnum indicatorPublic;
+
+    @Column(name = "CD_RESPONSIBLE_USER", length = 40, nullable = false, updatable = false)
+    private String responsibleUser;
 
 }

@@ -1,4 +1,4 @@
-package br.com.brunoeas.poc.common.enums;
+package br.com.brunoeas.poc.core.entities.common.enums;
 
 import jakarta.persistence.AttributeConverter;
 import lombok.AllArgsConstructor;
@@ -43,7 +43,7 @@ public abstract class AbstractEnumConverter<E extends PersistentEnum<T>, T> impl
         return Stream.of(this.enumClass.getEnumConstants())
                 .filter(e -> Objects.equals(e.getCode(), dbData))
                 .findFirst()
-                .orElseThrow();
+                .orElse(null);
     }
 
 }

@@ -1,4 +1,4 @@
-package br.com.brunoeas.poc.common.exceptions;
+package br.com.brunoeas.poc.infrastructure.exceptions;
 
 import jakarta.annotation.Priority;
 import jakarta.ws.rs.core.Response;

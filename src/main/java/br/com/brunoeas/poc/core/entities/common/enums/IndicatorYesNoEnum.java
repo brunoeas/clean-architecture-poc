@@ -1,4 +1,4 @@
-package br.com.brunoeas.poc.common.enums;
+package br.com.brunoeas.poc.core.entities.common.enums;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
