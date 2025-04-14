@@ -1,4 +1,4 @@
-package br.com.brunoeas.poc.infrastructure.validations;
+package br.com.brunoeas.poc.core.usecases.common.utils;
 
 import br.com.brunoeas.poc.infrastructure.exceptions.CustomException;
 import br.com.brunoeas.poc.infrastructure.exceptions.ErrorDTO;

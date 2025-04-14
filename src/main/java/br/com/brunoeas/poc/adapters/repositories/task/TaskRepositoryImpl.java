@@ -14,7 +14,7 @@ public class TaskRepositoryImpl implements TaskRepository {
     JpaTaskRepository repository;
 
     @Override
-    public void persist(Task task) {
+    public void persist(final Task task) {
         this.repository.persist(task);
     }
 
