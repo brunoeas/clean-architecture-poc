@@ -1,6 +1,7 @@
-package br.com.brunoeas.poc.core.entities.task.enums;
+package br.com.brunoeas.poc.core.entities.task.enums.converter;
 
-import br.com.brunoeas.poc.core.entities.common.enums.AbstractEnumConverter;
+import br.com.brunoeas.poc.core.entities.common.enums.converter.AbstractEnumConverter;
+import br.com.brunoeas.poc.core.entities.task.enums.TaskStatusEnum;
 import jakarta.persistence.Converter;
 
 @Converter

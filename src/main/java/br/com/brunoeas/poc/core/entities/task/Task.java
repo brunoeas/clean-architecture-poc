@@ -1,9 +1,9 @@
 package br.com.brunoeas.poc.core.entities.task;
 
 import br.com.brunoeas.poc.core.entities.common.enums.IndicatorYesNoEnum;
-import br.com.brunoeas.poc.core.entities.common.enums.IndicatorYesNoEnumConverter;
+import br.com.brunoeas.poc.core.entities.common.enums.converter.IndicatorYesNoEnumConverter;
 import br.com.brunoeas.poc.core.entities.task.enums.TaskStatusEnum;
-import br.com.brunoeas.poc.core.entities.task.enums.TaskStatusEnumConverter;
+import br.com.brunoeas.poc.core.entities.task.enums.converter.TaskStatusEnumConverter;
 import jakarta.persistence.*;
 import lombok.Data;
 

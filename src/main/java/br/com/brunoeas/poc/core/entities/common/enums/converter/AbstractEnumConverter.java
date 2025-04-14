@@ -1,5 +1,6 @@
-package br.com.brunoeas.poc.core.entities.common.enums;
+package br.com.brunoeas.poc.core.entities.common.enums.converter;
 
+import br.com.brunoeas.poc.core.entities.common.enums.PersistentEnum;
 import jakarta.persistence.AttributeConverter;
 import lombok.AllArgsConstructor;
 
