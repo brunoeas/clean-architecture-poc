@@ -1,5 +1,9 @@
-package br.com.brunoeas.poc.infrastructure.exceptions;
+package br.com.brunoeas.poc.infrastructure.validations;
 
+import br.com.brunoeas.poc.infrastructure.exceptions.CustomException;
+import br.com.brunoeas.poc.infrastructure.exceptions.ErrorDTO;
+import br.com.brunoeas.poc.infrastructure.exceptions.ErrorMessageEnum;
+import br.com.brunoeas.poc.infrastructure.exceptions.MonitoredVariableKeys;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.Validation;
 import jakarta.validation.Validator;
@@ -31,7 +35,7 @@ public final class BeanValidator {
 
     private static <T> ErrorDTO mapConstraintViolationToChatErrorDTO(final ConstraintViolation<T> constraint) {
         Objects.requireNonNull(constraint.getMessage());
-        final String[] params = constraint.getMessage().split(";");
+        final String[] params = constraint.getMessage().split(";");// separa nome do erro das variáveis monitoradas extras
         if (params.length < 1) {
             throw new IllegalArgumentException("Incorrect use of validation annotations.");
         }

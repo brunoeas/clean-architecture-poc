@@ -1,5 +1,7 @@
-package br.com.brunoeas.poc.task;
+package br.com.brunoeas.poc.adapters.controllers;
 
+import br.com.brunoeas.poc.core.usecases.task.CreateTaskUseCase;
+import jakarta.inject.Inject;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.POST;
 import jakarta.ws.rs.Path;
@@ -12,8 +14,12 @@ import jakarta.ws.rs.core.Response;
 @Consumes(MediaType.APPLICATION_JSON)
 public class TaskResource {
 
+    @Inject
+    CreateTaskUseCase createTaskUseCase;
+
     @POST
-    public Response newTask() {
+    public Response createTask() {
+        this.createTaskUseCase.execute();
         return Response.status(Response.Status.CREATED).build();
     }
 
